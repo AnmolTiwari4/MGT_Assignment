@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#10120f">
+    <meta name="description" content="NESTIQ — Find a home that fits the way you live.">
+    <title>NESTIQ — Find your kind of home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip" href="#discover">Skip to search</a>
+    <nav class="nav"><a class="brand" href="#top">NEST<span>IQ</span><small>HOMES THAT GET YOU</small></a><button
+            class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links"><a href="#discover">Discover</a><a href="#how">How it works</a><a href="#assistant">AI
+                assistant</a><a href="#broker">For brokers</a><a class="nav-button" href="#discover"><span>Find my home
+                    ↗</span></a></div>
+    </nav>
+    <main id="top">
+        <header class="hero3d" id="heroWrap">
+            <div class="hero hero3d-stick">
+                <canvas id="hero3d" aria-label="Interactive realistic 3D architectural model of a modern home"></canvas>
+                <div class="hero3d-vignette"></div>
+                <div class="hero3d-hud" id="heroHud">● LIVE 3D · SCROLL TO ENTER</div>
+                <div class="hero3d-location">BHOPAL · NESTIQ RESIDENCE / 01</div>
+                <div class="hero3d-bar"><i id="heroBar"></i></div>
+                <div class="hero-inner" id="heroText">
+                    <div class="eyebrow">A smarter way to find your place</div>
+                    <h1>Find a home<br>that gets <em>you.</em></h1>
+                    <div class="hero-line">
+                        <p>Say what matters in your own words. We'll find the homes that fit your life—not just your
+                            filters.</p>
+                        <a href="#discover">Tell us what you're looking for <b>↓</b></a>
+                    </div>
+                </div>
+                <div id="heroFade"></div>
+                <div class="hero3d-end" id="heroEnd">
+                    <div>
+                        <div class="eyebrow">Step inside</div>
+                        <h2 class="serif">Now, <span class="lime">describe it.</span></h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="ticker">
+            <div class="ticker-track"><span>Search like you speak</span><b>✳</b><span>Recommendations with a
+                    reason</span><b>✳</b><span>Every detail, in one place</span><b>✳</b><span>Search like you
+                    speak</span><b>✳</b><span>Recommendations with a reason</span><b>✳</b><span>Every detail, in one
+                    place</span><b>✳</b></div>
+        </div>
+        <section class="search-section wrap" id="discover">
+            <div class="search-heading reveal">
+                <div>
+                    <div class="eyebrow">01 / Tell us what home means</div>
+                    <h2 class="serif">Skip the filters.<br><span class="lime">Just describe it.</span></h2>
+                </div>
+                <p>Combine budget, commute, lifestyle and must-haves in a single search. Your words become meaningful
+                    property
+                    criteria.</p>
+            </div>
+            <div class="search-box reveal">
+                <div class="search-tabs"><button class="active" data-mode="Buy">Buy</button><button
+                        data-mode="Rent">Rent</button><button data-mode="Commercial">Commercial</button></div>
+                <div class="prompt-row"><textarea id="prompt" aria-label="Describe your ideal home"
+                        placeholder="Try: Find me a modern 3BHK under ₹1 crore in Bhopal, within 30 minutes of my office, with two parking spaces and a quiet neighbourhood."></textarea><button
+                        id="searchBtn" class="find-btn">Find my home <span>↗</span></button></div>
+                <div class="prompt-help"><span>Search naturally. We'll structure the details.</span>
+                    <div class="examples"><button>Modern 3BHK under ₹1Cr</button><button>Quiet, near
+                            schools</button><button>Under
+                            30 min commute</button></div>
+                </div>
+                <div class="parsed" id="parsed">
+                    <div class="parsed-head"><span>Here's what we understood</span><span>EDIT ANY TIME</span></div>
+                    <div class="chips" id="chips"></div>
+                </div>
+            </div>
+            <div class="results" id="results">
+                <div class="results-head">
+                    <div>
+                        <div class="eyebrow">Your first shortlist · Bhopal</div>
+                        <h3>Homes with a reason to match.</h3>
+                    </div>
+                    <div class="sort">SORTED BY <strong>YOUR FIT</strong> ↕</div>
+                </div>
+                <div class="property-grid">
+                    <article class="property" data-name="The Sky Residence" data-price="92" data-bhk="3" data-area="arera colony" data-tags="quiet commute parking">
+                        <div class="property-photo"><img loading="lazy" decoding="async" loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                                alt="Modern residence with a swimming pool"><span class="match">94% MATCH</span><button
+                                class="heart" aria-label="Save The Sky Residence">♡</button></div>
+                        <div class="property-body">
+                            <div class="property-place">Arera Colony · Bhopal</div>
+                            <h4>The Sky Residence</h4>
+                            <div class="price">₹92 lakh</div>
+                            <div class="facts"><span>3 BHK</span><span>1,850 sq ft</span><span>2 parking</span></div>
+                            <div class="why"><strong>Why it fits:</strong> Within budget · 18 min commute · quiet lane
+                            </div>
+                            <div class="card-actions"><button class="compare">＋ Compare</button><button
+                                    class="visit">Schedule visit
+                                    ↗</button></div>
+                        </div>
+                    </article>
+                    <article class="property" data-name="Courtyard No. 8" data-price="88" data-bhk="3" data-area="shahpura" data-tags="school garden parking">
+                        <div class="property-photo"><img loading="lazy" decoding="async" loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+                                alt="Contemporary home with warm natural finishes"><span class="match">89%
+                                MATCH</span><button class="heart" aria-label="Save Courtyard No. 8">♡</button></div>
+                        <div class="property-body">
+                            <div class="property-place">Shahpura · Bhopal</div>
+                            <h4>Courtyard No. 8</h4>
+                            <div class="price">₹88 lakh</div>
+                            <div class="facts"><span>3 BHK</span><span>1,720 sq ft</span><span>2 parking</span></div>
+                            <div class="why"><strong>Why it fits:</strong> New build · garden outlook · schools nearby
+                            </div>
+                            <div class="card-actions"><button class="compare">＋ Compare</button><button
+                                    class="visit">Schedule visit
+                                    ↗</button></div>
+                        </div>
+                    </article>
+                    <article class="property" data-name="The Grove Apartment" data-price="79" data-bhk="3" data-area="bawadiya kalan" data-tags="gym park parking">
+                        <div class="property-photo"><img loading="lazy" decoding="async" loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                                alt="Light filled apartment interior overlooking greenery"><span class="match">84%
+                                MATCH</span><button class="heart" aria-label="Save The Grove Apartment">♡</button></div>
+                        <div class="property-body">
+                            <div class="property-place">Bawadiya Kalan · Bhopal</div>
+                            <h4>The Grove Apartment</h4>
+                            <div class="price">₹79 lakh</div>
+                            <div class="facts"><span>3 BHK</span><span>1,610 sq ft</span><span>2 parking</span></div>
+                            <div class="why"><strong>Why it fits:</strong> Below budget · gated community · gym</div>
+                            <div class="card-actions"><button class="compare">＋ Compare</button><button
+                                    class="visit">Schedule visit
+                                    ↗</button></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="results-foot"><span>3 of 126 homes · Demo listing data</span><span>Match score reflects your
+                        stated
+                        preferences</span></div>
+            </div>
+        </section>
+        <section class="journey" id="how">
+            <div class="wrap">
+                <div class="journey-head reveal">
+                    <div class="eyebrow">From a thought to your front door</div>
+                    <h2 class="serif">A better search.<br><span class="lime">A clearer next step.</span></h2>
+                    <p>Useful intelligence behind the scenes. A simple, human experience up front.</p>
+                </div>
+                <div class="steps">
+                    <article class="step reveal">
+                        <div class="step-num">01 / UNDERSTAND</div>
+                        <div class="step-art">⌁</div>
+                        <h3>Say it your way</h3>
+                        <p>Tell NESTIQ what you need, from budget and bedrooms to commute time and the feel of a
+                            neighbourhood.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step-num">02 / FIND</div>
+                        <div class="step-art">⌖</div>
+                        <h3>Real homes, ranked for you</h3>
+                        <p>Your words become structured search criteria. Property data and preference signals shape a
+                            useful
+                            shortlist.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step-num">03 / KNOW WHY</div>
+                        <div class="step-art">◉</div>
+                        <h3>Every match has a reason</h3>
+                        <p>See which requirements each home meets, where it differs, and how it compares with your
+                            priorities.</p>
+                    </article>
+                    <article class="step reveal">
+                        <div class="step-num">04 / MOVE</div>
+                        <div class="step-art">↗</div>
+                        <h3>From shortlist to site visit</h3>
+                        <p>Save favourites, compare the trade-offs, ask questions and request a visit with a local
+                            broker.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="featured">
+            <div class="wrap featured-grid">
+                <div class="featured-copy reveal">
+                    <div class="eyebrow">The NESTIQ difference · 01</div>
+                    <h2 class="serif">Not just a<br>match.<br><em>A why.</em></h2>
+                    <p>We explain how a home lines up with your own priorities—budget, bedrooms, commute and the details
+                        that make
+                        a place feel right.</p><a href="#discover">Try your own search <span>↗</span></a>
+                </div>
+                <div class="feature-card reveal"><img loading="lazy" decoding="async" loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=90"
+                        alt="The Sky Residence, contemporary family home">
+                    <div class="feature-overlay">
+                        <div class="eyebrow">Your search · best fit</div>
+                        <h3>The Sky Residence</h3>
+                        <p>94% PREFERENCE MATCH · ARERA COLONY, BHOPAL · ₹92 LAKH</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="assistant-section wrap" id="assistant">
+            <div class="assistant-grid">
+                <div class="assistant-copy reveal">
+                    <div class="eyebrow">A useful answer, grounded in listing details</div>
+                    <h2 class="serif">Meet your<br>property <span class="lime">sidekick.</span></h2>
+                    <p>Ask a home-specific question. The assistant uses the details attached to a listing to help you
+                        decide what
+                        to look at next.</p>
+                </div>
+                <div class="chat reveal">
+                    <div class="chat-top"><i class="online"></i> NESTIQ HOME ASSISTANT <span>ABOUT THE SKY
+                            RESIDENCE</span></div>
+                    <div class="chat-body" id="chatBody" aria-live="polite">
+                        <div class="chat-context">PROPERTY DETAILS · 3 BHK · 2 COVERED PARKING · ARERA COLONY</div>
+                        <div class="bubble user">Does it have enough parking for two cars?</div>
+                        <div class="bubble ai">Yes. The listing specifies two covered parking spaces. It also has a
+                            gated entrance
+                            and 24-hour security.</div>
+                        <div class="suggestions"><button>How long is the commute?</button><button>What's
+                                nearby?</button><button>Show a cheaper option</button></div>
+                    </div>
+                    <form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Ask about this property…"
+                            aria-label="Ask about this property"><button aria-label="Send message">↗</button></form>
+                </div>
+            </div>
+        </section>
+        <section class="compare-section" id="compare-section">
+            <div class="wrap">
+                <div class="compare-head reveal">
+                    <div>
+                        <div class="eyebrow">Choose what matters to you</div>
+                        <h2 class="serif">Compare the<br><span class="lime">trade-offs.</span></h2>
+                    </div>
+                    <p>There's no universal "best" home. See the details side by side and decide what works for you.</p>
+                </div>
+                <div class="table-wrap reveal">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Your shortlist</th>
+                                <th>The Sky Residence</th>
+                                <th>Courtyard No. 8</th>
+                                <th>The Grove Apartment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Price</td>
+                                <td>₹92L</td>
+                                <td>₹88L</td>
+                                <td>₹79L</td>
+                            </tr>
+                            <tr>
+                                <td>Area</td>
+                                <td>1,850 sq ft</td>
+                                <td>1,720 sq ft</td>
+                                <td>1,610 sq ft</td>
+                            </tr>
+                            <tr>
+                                <td>Bedrooms</td>
+                                <td>3 BHK</td>
+                                <td>3 BHK</td>
+                                <td>3 BHK</td>
+                            </tr>
+                            <tr>
+                                <td>Parking</td>
+                                <td>2 covered</td>
+                                <td>2 covered</td>
+                                <td>2 covered</td>
+                            </tr>
+                            <tr>
+                                <td>Commute</td>
+                                <td>18 min</td>
+                                <td>24 min</td>
+                                <td>27 min</td>
+                            </tr>
+                            <tr>
+                                <td>Strongest fit</td>
+                                <td>Commute + space</td>
+                                <td>Schools + garden</td>
+                                <td>Price + amenities</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="broker" id="broker">
+            <div class="wrap">
+                <div class="broker-head reveal">
+                    <div class="eyebrow">A smoother handoff to a real person</div>
+                    <h2 class="serif">Better context.<br><span class="lime">Better conversations.</span></h2>
+                    <p>A preview of the broker workspace that helps teams follow up with care.</p>
+                </div>
+                <div class="dashboard reveal">
+                    <div class="dash-top"><span>NESTIQ / BROKER WORKSPACE</span><span class="dash-live">● LIVE
+                            ACTIVITY</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat"><small>New leads</small><strong>27</strong></div>
+                        <div class="stat"><small>High intent</small><strong>08</strong></div>
+                        <div class="stat"><small>Site visits</small><strong>12</strong></div>
+                        <div class="stat"><small>Active deals</small><strong>06</strong></div>
+                    </div>
+                    <div class="leads header"><span>Prospect</span><span>Looking
+                            for</span><span>Signal</span><span>Activity</span><span>Next step</span></div>
+                    <div class="leads"><span class="lead-name"><i class="avatar">R</i> Rahul M.</span><span>3 BHK ·
+                            ₹90L</span><span class="intent">HIGH INTENT</span><span>Saved 3 homes</span><span>Visit
+                            requested ↗</span>
+                    </div>
+                    <div class="leads"><span class="lead-name"><i class="avatar">P</i> Priya S.</span><span>2 BHK ·
+                            ₹65L</span><span class="intent" style="color:#e9c767">EXPLORING</span><span>Compared 2
+                            homes</span><span>Follow up ↗</span></div>
+                    <div class="leads"><span class="lead-name"><i class="avatar">A</i> Aman K.</span><span>Villa ·
+                            ₹1.2Cr</span><span class="intent" style="color:#aaa">EARLY</span><span>New
+                            enquiry</span><span>Introduce
+                            ↗</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="end">
+            <div class="wrap end-inner reveal">
+                <div class="eyebrow">Your next place is out there</div>
+                <h2 class="serif">Let's get<br><em>you home.</em></h2><a href="#discover">Start with a sentence
+                    <span>↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><a class="brand" href="#top">NEST<span>IQ</span></a><span>© 2026 NESTIQ · A smarter way
+            home</span>
+        <div><a href="#discover">Discover</a><a href="#how">How it works</a><a href="#assistant">Help</a></div>
+    </footer>
+    <div class="compare-bar" id="compareBar"><span id="compareCount">0 selected</span><button id="compareJump">Compare
+            homes ↗</button><button id="clearCompare">Clear</button></div>
+    <div class="modal" id="visitModal" role="dialog" aria-modal="true" aria-labelledby="visitTitle">
+        <form class="modal-card" id="visitForm"><button type="button" class="modal-close" aria-label="Close">×</button>
+            <div class="eyebrow">Meet the place in person</div>
+            <h2 id="visitTitle">Request a visit.</h2>
+            <p id="visitProperty">Property details</p><label>Your name<input required
+                    placeholder="Your name"></label><label>Email address<input type="email" required
+                    placeholder="you@example.com"></label><label>Preferred time<select>
+                    <option>Saturday · 11:00 AM</option>
+                    <option>Saturday · 2:00 PM</option>
+                    <option>Sunday · 11:00 AM</option>
+                    <option>Weekday · Contact me</option>
+                </select></label><button class="confirm">Request visit ↗</button>
+        </form>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="nestiq.js"></script>
+</body>
+
+</html>
